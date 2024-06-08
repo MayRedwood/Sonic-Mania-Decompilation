@@ -110,7 +110,7 @@ void LRZ1Setup_StageLoad(void)
         Zone->stageFinishCallback = LRZ1Setup_StageFinish_EndAct1;
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE) {
+    if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreLRZ1.act", 0b0000000011111111);
 
         for (int32 i = 0; i < 0x400; ++i) LRZ1Setup->fgLow->deformationData[i] = LRZ1Setup->deformFG[i & 0x1F];

@@ -289,7 +289,7 @@ void OOZSetup_StageLoad(void)
         if (isMainGameMode() && CutsceneRules_IsAct2())
             Zone->stageFinishCallback = OOZ2Outro_StageFinish_EndAct2;
 
-        if (SceneInfo->filter & FILTER_ENCORE) {
+        if (SceneInfo->filter & FILTER_MANIA) {
             RSDK.LoadPalette(0, "EncoreOOZ2.act", 0b0000000011111111);
             RSDK.LoadPalette(2, "EncoreOOZSmog.act", 0b0000000011111111);
 
@@ -305,7 +305,7 @@ void OOZSetup_StageLoad(void)
 #endif
     }
 #if MANIA_USE_PLUS
-    else if (SceneInfo->filter & FILTER_ENCORE) {
+    else if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreOOZ1.act", 0b0000000011111111);
         RSDK.CopyPalette(0, 128, 1, 128, 80);
         RSDK.CopyPalette(0, 128, 3, 128, 80);

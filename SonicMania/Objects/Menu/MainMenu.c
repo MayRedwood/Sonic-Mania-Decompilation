@@ -79,6 +79,7 @@ void MainMenu_Initialize(void)
     }
 
 #if MANIA_USE_PLUS
+    int32 button0Frame = 0; // Mania Mode
     int32 button1Frame = 1; // Time Attack
     int32 button2Frame = 2; // Competition
     int32 button3Frame = 3; // Options
@@ -89,7 +90,8 @@ void MainMenu_Initialize(void)
     bool32 button5Transition = false; // Buy Plus Does NOT do a transition
 
     if (API.CheckDLC(DLC_PLUS)) {
-        button1Frame = 5; // Encore Mode
+        button0Frame = 5; // Encore Mode
+        button1Frame = 0; // Mania Mode
         button2Frame = 1; // Time Attack
         button3Frame = 2; // Competition
         button4Frame = 3; // Options
@@ -100,7 +102,7 @@ void MainMenu_Initialize(void)
     }
 
     EntityUIButton *buttonManiaMode = menuControl->buttons[0];
-    buttonManiaMode->frameID        = 0;
+    buttonManiaMode->frameID        = button0Frame;
     buttonManiaMode->transition     = true;
     buttonManiaMode->stopMusic      = true;
 

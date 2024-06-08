@@ -216,7 +216,7 @@ void HCZSetup_StageLoad(void)
     }
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE) {
+    if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreHCZ.act", 0b0000000011111111);
         RSDK.LoadPalette(1, "EncoreHCZw.act", 0b0000000011111111);
     }

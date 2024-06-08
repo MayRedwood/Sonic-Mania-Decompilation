@@ -105,7 +105,7 @@ void PSZ2Setup_StageLoad(void)
         Zone->stageFinishCallback = PSZ2Setup_StageFinish_EndAct2;
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE)
+    if (SceneInfo->filter & FILTER_MANIA)
         RSDK.LoadPalette(0, "EncorePSZ2.act", 0b0000000011111111);
 
     // Fun Fact: Pre-Plus didn't have animal types set for PGZ! It'd always be flickies due to that being the default value!

@@ -116,7 +116,7 @@ void FBZSetup_StageLoad(void)
     if (isMainGameMode() && CutsceneRules_IsAct2())
         Zone->stageFinishCallback = FBZSetup_StageFinish_EndAct2;
 
-    if ((SceneInfo->filter & FILTER_ENCORE)) {
+    if ((SceneInfo->filter & FILTER_MANIA)) {
         RSDK.LoadPalette(0, "EncoreFBZ.act", 0b0000000011111111);
         RSDK.CopyPalette(0, 1, 1, 1, 0b0000000011111111);
         RSDK.LoadPalette(2, "EncoreFBZs.act", 0b0000000011111111);

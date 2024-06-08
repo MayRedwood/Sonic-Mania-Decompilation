@@ -108,7 +108,7 @@ void TMZ1Setup_StageLoad(void)
 
     if (!TMZ1Setup->paletteInit) {
 #if MANIA_USE_PLUS
-        if (SceneInfo->filter & FILTER_ENCORE) {
+        if (SceneInfo->filter & FILTER_MANIA) {
             RSDK.LoadPalette(0, "EncoreTMZ1.act", 0b0000000011111111);
             RSDK.LoadPalette(1, "EncoreTMZ1d.act", 0b0000000011111111);
             RSDK.LoadPalette(2, "EncoreTMZ1l.act", 0b0000000011111111);

@@ -101,7 +101,7 @@ void SPZ1Setup_StageLoad(void)
     }
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE) {
+    if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreSPZ1.act", 0b0000000011111111);
         RSDK.LoadPalette(1, "EncoreSPZ1b1.act", 0b0000000011111111);
         RSDK.LoadPalette(2, "EncoreSPZ1b2.act", 0b0000000011111111);

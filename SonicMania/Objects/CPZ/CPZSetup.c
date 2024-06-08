@@ -69,7 +69,7 @@ void CPZSetup_StageLoad(void)
     }
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE) {
+    if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreCPZ.act", 0b0000000011111111);
         RSDK.LoadPalette(2, "EncoreCPZw.act", 0b0000000011111111);
         RSDK.CopyPalette(0, 128, 1, 0, 10);
