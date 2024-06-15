@@ -78,7 +78,7 @@ void PhantomEgg_StageLoad(void)
     PhantomEgg->savedGameProgress = false;
 
 #if MANIA_USE_PLUS
-    if (SceneInfo->filter & FILTER_ENCORE) {
+    if (SceneInfo->filter & FILTER_MANIA) {
         RSDK.LoadPalette(0, "EncoreTMZ3.act", 0b0000000011111111);
         RSDK.LoadPalette(1, "EncoreTMZ3.act", 0b0000000011111111);
     }
