@@ -822,7 +822,7 @@ void UISaveSlot_HandleSaveIcons(void)
                 RSDK.CopyPalette(((self->saveZoneID >> 3) + 1), 32 * self->saveZoneID, 0, 224, 32);
             else
 #endif
-                RSDK.CopyPalette(((self->saveZoneID >> 3) + 1), 32 * self->saveZoneID, 0, 224, 32);
+                RSDK.CopyPalette(((self->saveZoneID >> 3) + 4), 32 * self->saveZoneID, 0, 224, 32);
         }
     }
 }
