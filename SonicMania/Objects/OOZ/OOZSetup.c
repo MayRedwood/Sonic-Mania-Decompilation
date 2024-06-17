@@ -305,7 +305,7 @@ void OOZSetup_StageLoad(void)
 #endif
     }
 #if MANIA_USE_PLUS
-    else if (SceneInfo->filter & FILTER_MANIA) {
+    else if (SceneInfo->filter & FILTER_ENCORE) {
         RSDK.LoadPalette(0, "EncoreOOZ1.act", 0b0000000011111111);
         RSDK.CopyPalette(0, 128, 1, 128, 80);
         RSDK.CopyPalette(0, 128, 3, 128, 80);
