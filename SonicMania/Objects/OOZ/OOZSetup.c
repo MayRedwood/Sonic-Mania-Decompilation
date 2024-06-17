@@ -289,7 +289,7 @@ void OOZSetup_StageLoad(void)
         if (isMainGameMode() && CutsceneRules_IsAct2())
             Zone->stageFinishCallback = OOZ2Outro_StageFinish_EndAct2;
 
-        if (SceneInfo->filter & FILTER_MANIA) {
+        if (SceneInfo->filter & FILTER_ENCORE) {
             RSDK.LoadPalette(0, "EncoreOOZ2.act", 0b0000000011111111);
             RSDK.LoadPalette(2, "EncoreOOZSmog.act", 0b0000000011111111);
 
