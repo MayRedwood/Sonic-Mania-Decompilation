@@ -768,8 +768,11 @@ void KleptoMobile_CheckPlayerCollisions_Arm(void)
         if (Player_CheckCollisionTouch(player, self, &self->hitbox)) {
             if (player->superState == SUPERSTATE_SUPER) {
                 if (!player->blinkTimer) {
-                    RSDK.PlaySfx(KleptoMobile->sfxWhack, false, 255);
+                    // RSDK.PlaySfx(KleptoMobile->sfxWhack, false, 255);
                     player->blinkTimer = 120;
+                    Ring_LoseRings(player, MIN(player->rings, 8), player->collisionPlane);
+                    player->rings -= MIN(player->rings, 8);
+                    RSDK.PlaySfx(Player->sfxLoseRings, false, 255);
 
                     if (self->state == KleptoMobile_StateArm_ChargeAttack) {
                         player->velocity.x = self->parent->velocity.x >> 2;

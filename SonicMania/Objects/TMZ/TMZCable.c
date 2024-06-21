@@ -56,13 +56,13 @@ void TMZCable_Create(void *data)
                 break;
 
             case 2:
-                self->offset.x = -0x1C0000;
-                self->offset.y = -0x100000;
+                self->offset.x = -0x000000;
+                self->offset.y = 0x100000;
                 self->angle    = 0x80;
                 break;
 
             case 3:
-                self->offset.x = 0x1C0000;
+                self->offset.x = 0x000000;
                 self->offset.y = -0x100000;
                 self->angle    = 0xC0;
                 break;

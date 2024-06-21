@@ -102,7 +102,12 @@ void PhantomShield_State_Active(void)
             self->playerTimer[player->playerID]--;
 
         if (Player_CheckCollisionTouch(player, self, &PhantomShield->hitbox)) {
-            if (Player_CheckAttacking(player, self)) {
+            if (player->superState == SUPERSTATE_SUPER) {
+                player->superState = SUPERSTATE_FADEOUT;
+                player->jumpAbilityState = 0;
+                Player_Hurt(player, self);
+            }
+            else if (Player_CheckAttacking(player, self)) {
                 self->blendAmount = 256;
                 if (!self->playerTimer[player->playerID]) {
                     RSDK.PlaySfx(PhantomEgg->sfxRepel, false, 255);

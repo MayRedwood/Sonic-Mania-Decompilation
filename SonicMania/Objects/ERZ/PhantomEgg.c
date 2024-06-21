@@ -56,7 +56,7 @@ void PhantomEgg_Create(void *data)
 
             self->drawFX = FX_FLIP;
             self->active = ACTIVE_NORMAL;
-            self->health = 16;
+            self->health = 24;
 
             RSDK.SetSpriteAnimation(PhantomEgg->aniFrames, 0, &self->coreAnimator, true, 0);
             RSDK.SetSpriteAnimation(PhantomEgg->aniFrames, 17, &self->eggmanAnimator, true, 0);
@@ -153,7 +153,7 @@ void PhantomEgg_Hit(void)
     RSDK_THIS(PhantomEgg);
 
     --self->health;
-    if (!(self->health & 3)) {
+    if (!(self->health & 7)) {
         int32 id = (-2 - RSDK.GetEntityCount(TMZCable->classID, true)) & 3;
 
         foreach_active(TMZCable, cable)
@@ -163,7 +163,7 @@ void PhantomEgg_Hit(void)
                 cable->state = TMZCable_State_Destroyed;
                 // Bug Details:
                 // uncomment to fix a minor visual bug where the start few cable nodes wont be destroyed properly
-                // cable->timer = 0;
+                cable->timer = 0;
             }
         }
 
